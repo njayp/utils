@@ -1,9 +1,8 @@
 imp!();
 
-pub fn user_select_from_list <T> (things: Vec<T>) -> Result<usize, Box<dyn Error>> where
+pub fn user_select_from_list <T> (things: &Vec<T>) -> Result<usize, Box<dyn Error>> where
     T: std::fmt::Debug
 {
-    
     for thing in things.iter().enumerate() {
         println!("{:?}", thing);
     }
