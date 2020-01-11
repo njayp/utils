@@ -1,2 +1,1 @@
-
-mod win_app_search;
+pub mod win_app_search;
