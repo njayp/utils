@@ -1,5 +1,8 @@
 imp!();
 
+// TODO search displayname
+// TODO return option 
+
 pub fn find_windows_app(app_name: &str) -> PathBuf {
     let di = std::string::String::from_utf8(
         Command::new("powershell").arg(format!(r#"Get-ItemProperty "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\\{}" | Select-Object DisplayIcon"#, app_name)
