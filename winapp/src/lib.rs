@@ -1,4 +1,12 @@
-#![allow(unused_imports)]
+//#![allow(unused_imports)]
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        assert_eq!(2 + 2, 4);
+    }
+}
 
 #[macro_use]
 mod macros {
@@ -18,8 +26,4 @@ mod macros {
     }
 }
 
-pub use self::win_app_search::find_windows_app;
 mod win_app_search;
-
-pub use self::user_input_list::user_select_from_list;
-mod user_input_list;
